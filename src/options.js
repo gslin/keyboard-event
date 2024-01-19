@@ -76,6 +76,10 @@
     const tr = document.createElement('tr');
     tr.data = rule;
 
+    const td_icon = document.createElement('td');
+    td_icon.innerHTML = '<img src="drag_handle.png" />';
+    tr.appendChild(td_icon);
+
     const td_hostname = document.createElement('td');
     td_hostname.innerText = rule.hostname;
     tr.appendChild(td_hostname);
@@ -112,6 +116,8 @@
     });
 
     jQuery('tbody').sortable({
+      handle: 'td:first-of-type',
+      items: '> tr',
       update: syncHosts,
     });
   }
