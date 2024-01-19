@@ -1,0 +1,22 @@
+{
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "src/icon.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/content.js"],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "description": "Customize keys to trigger HTML DOM events",
+  "manifest_version": 3,
+  "name": "Keyboard Event",
+  "options_page": "src/options.html",
+  "permissions": [
+    "storage"
+  ],
+  "version": "0.20240119.0"
+}

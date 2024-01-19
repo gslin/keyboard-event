@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="bootstrap-5.3.2.min.css" rel="stylesheet" />
+<link href="jquery-ui-1.13.2.css" rel="stylesheet" />
+<script src="jquery-3.7.1.min.js"></script>
+<script src="jquery-ui-1.13.2.min.js"></script>
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Keyboard Event</h1>
+
+  <h2 class="mt-4">Rules</h2>
+  <p>You can drag a rule to reoder rules.</p>
+  <table class="align-middle table table-bordered">
+    <thead>
+      <tr>
+        <th>Hostname</th>
+        <th>Path</th>
+        <th>Key</th>
+        <th>Element</th>
+        <th>Event</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <button class="btn btn-secondary" x-action="load_preset">Load Preset</button>
+  <button class="btn btn-danger" x-action="reset">Reset</button>
+
+  <h2 class="mt-4">Create a new rule</h2>
+  <form>
+    <div class="my-4">
+      <label class="form-label" for="hostname">Hostname</label>
+      <input class="form-control" name="hostname" placeholder="www.example.com" required type="text" />
+    </div>
+
+    <div class="my-4">
+      <label class="form-label" for="hostname">Path (Regular Expression)</label>
+      <input class="form-control" name="path" placeholder=".*" required type="text" />
+    </div>
+
+    <div class="my-4">
+      <label class="form-label" for="key">Key</label>
+      <input class="form-control" name="key" placeholder="&gt;" required type="text" />
+    </div>
+
+    <div class="my-4">
+      <label class="form-label" key="element">Element (CSS selector)</label>
+      <input class="form-control" name="element" placeholder="button[aria-label=&quot;Next&quot;]" required type="text" />
+    </div>
+
+    <div class="my-4">
+      <label class="form-label" key="event">Event name (or <code>click()</code> for some cases)</label>
+      <input class="form-control" name="event" placeholder="mousedown" required type="text" />
+    </div>
+
+    <div class="my-4">
+      <input class="btn btn-primary" type="submit" value="Create (Append)" />
+    </div>
+  </form>
+
+  <footer>
+    <a href="https://github.com/gslin/keyboard-event">Keyboard Event</a> is created by <a href="https://github.com/gslin">Gea-Suan Lin</a>, with <a href="https://getbootstrap.com/">Bootstrap CSS</a>, <a href="https://jquery.com/">jQuery</a> and <a href="https://jqueryui.com/">jQuery UI</a>.
+  </footer>
+</div>
+<script src="options.js"></script>
+</body>
+</html>
