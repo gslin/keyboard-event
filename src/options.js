@@ -1,15 +1,15 @@
 (async () => {
   const preset_hosts = [
     {
-      code: 'ArrowRight',
-      element: 'button[aria-label="Next"]',
+      code: 'ArrowLeft',
+      element: 'button[aria-label="Previous"]',
       event: 'click()',
       hostname: 'www.linkedin.com',
       path: '.*',
     },
     {
-      code: 'ArrowLeft',
-      element: 'button[aria-label="Previous"]',
+      code: 'ArrowRight',
+      element: 'button[aria-label="Next"]',
       event: 'click()',
       hostname: 'www.linkedin.com',
       path: '.*',
