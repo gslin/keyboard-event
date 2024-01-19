@@ -1,17 +1,17 @@
 (async () => {
   const preset_hosts = [
     {
+      code: 'ArrowRight',
       element: 'button[aria-label="Next"]',
       event: 'click()',
       hostname: 'www.linkedin.com',
-      key: '>',
       path: '.*',
     },
     {
+      code: 'ArrowLeft',
       element: 'button[aria-label="Previous"]',
       event: 'click()',
       hostname: 'www.linkedin.com',
-      key: '<',
       path: '.*',
     },
   ];
@@ -59,10 +59,10 @@
       ev.preventDefault();
 
       const tr = generateTr({
+        code: document.querySelector('input[name="code"]').value,
         element: document.querySelector('input[name="element"]').value,
         event: document.querySelector('input[name="event"]').value,
         hostname: document.querySelector('input[name="hostname"]').value,
-        key: document.querySelector('input[name="key"]').value,
         path: document.querySelector('input[name="path"]').value,
       });
       const tbody = document.querySelector('tbody');
@@ -88,9 +88,9 @@
     td_path.innerText = rule.path;
     tr.appendChild(td_path);
 
-    const td_key = document.createElement('td');
-    td_key.innerText = rule.key;
-    tr.appendChild(td_key);
+    const td_code = document.createElement('td');
+    td_code.innerText = rule.code;
+    tr.appendChild(td_code);
 
     const td_element = document.createElement('td');
     td_element.innerText = rule.element;
