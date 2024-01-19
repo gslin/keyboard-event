@@ -116,7 +116,7 @@
     });
 
     jQuery('tbody').sortable({
-      handle: 'td:first-of-type',
+      handle: 'td:first-of-type img',
       items: '> tr',
       update: syncHosts,
     });
