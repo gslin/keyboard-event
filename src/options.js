@@ -29,7 +29,7 @@
   }
 
   function bindReset() {
-    const el = document.querySelector('button[x-action="reset"]');
+    const el = document.querySelector('button[x-action="rule_reset"]');
     el.addEventListener('click', ev => {
       if (false === confirm("Do you really want to delete all rules?")){
         return;
