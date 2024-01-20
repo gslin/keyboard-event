@@ -23,7 +23,7 @@
       const el = ev.target;
       if (el.getAttribute('x-action') === 'delete') {
         el.closest('tr').remove();
-        syncHosts();
+        syncRules();
       }
     });
   }
@@ -68,7 +68,7 @@
       const tbody = document.querySelector('tbody');
       tbody.appendChild(tr);
 
-      syncHosts();
+      syncRules();
     });
   }
 
@@ -118,11 +118,11 @@
     jQuery('tbody').sortable({
       handle: 'td:first-of-type img',
       items: '> tr',
-      update: syncHosts,
+      update: syncRules,
     });
   }
 
-  function syncHosts() {
+  function syncRules() {
     const hosts = [];
     const trs = document.querySelectorAll('tbody > tr');
     trs.forEach(tr => {
