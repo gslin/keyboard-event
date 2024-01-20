@@ -30,7 +30,7 @@
       return;
     }
 
-    const c = ev.key;
+    const k = ev.key;
     rules.forEach(rule => {
       // XXX performance
       if (!document.location.pathname.match(rule.path)) {
