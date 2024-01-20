@@ -30,15 +30,15 @@
       return;
     }
 
-    const c = ev.code;
+    const c = ev.key;
     rules.forEach(rule => {
       // XXX performance
       if (!document.location.pathname.match(rule.path)) {
         return;
       }
 
-      if (c === rule.code) {
-        console.log(`keyboard-event: detected defined KeyboardEvent.code "${c}"`);
+      if (k === rule.key) {
+        console.log(`keyboard-event: detected defined KeyboardEvent.key "${k}"`);
 
         const el = document.querySelector(rule.element);
 
