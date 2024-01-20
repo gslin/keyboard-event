@@ -1,6 +1,5 @@
 {
   "action": {
-    "default_popup": "src/popup.html",
     "default_icon": "src/icon.png"
   },
   "content_scripts": [
